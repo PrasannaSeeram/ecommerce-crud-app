@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce Admin</title>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Product Manager</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <hr>
+<h1>Upload Products (Excel)</h1>
+
+<form id="excelForm" enctype="multipart/form-data">
+  <input type="file" id="excelFile" accept=".xlsx" required>
+  <button type="submit">Upload</button>
+  <p id="excelMessage" class="message"></p>
+</form>
+
+  <h1>Category Management</h1>
+
+  <form id="categoryForm">
+    <input type="text" id="category_name" placeholder="Category Name" required>
+    <input type="text" id="description" placeholder="Description">
+    <button type="submit">Add Category</button>
+    <p id="categoryMessage" class="message"></p>
+  </form>
+
+  <h2>Category List</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="categoryTableBody">
+      <!-- Filled by JS -->
+    </tbody>
+  </table>
+
+  <h2>Product List</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="productTableBody">
+    <!-- Product rows will appear here -->
+  </tbody>
+</table>
+
+<h2>Edit Product</h2>
+<form id="editProductForm" style="display:none;">
+  <input type="hidden" id="edit_product_id">
+
+  <label>Product Name:</label>
+  <input type="text" id="edit_product_name" required><br>
+
+  <label>Category:</label>
+  <select id="edit_category_id" required></select><br>
+
+  <label>Price:</label>
+  <input type="number" id="edit_price" step="0.01" required><br>
+
+  <label>Stock:</label>
+  <input type="number" id="edit_stock" required><br>
+
+  <button type="submit">Update</button>
+  <p id="editMessage" class="message"></p>
+</form>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
