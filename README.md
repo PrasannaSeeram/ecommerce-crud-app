@@ -1,55 +1,41 @@
-📌 Project Features
-🔹 1. Category Management
-Add new categories (name + description)
-Category name is required and must be unique (case-insensitive)
-View all existing categories in a table
-🔹 2. Product Upload via Excel
-Upload an .xlsx file with sheet name: Products
-Columns required: product_name, category_name, price, stock
-Validates:
-Category must exist
-Price > 0
-Stock ≥ 0
-Shows success message (e.g., ✅ Uploaded 3 products) or error (e.g., ❌ Row 2: Invalid category)
-🔹 3. Product Display
-Displays all products with:
-ID, Name, Category Name (via JOIN), Price, Stock
-Edit button to modify product details
-Delete button to remove a product
-🔹 4. Product Editing
-Edit product name, category (dropdown), price, stock
-Validations on input (non-empty name, price > 0, etc.)
-📊 Database Schema
-📁 category Table
-Column	Type	Notes
-category_id	INT (PK, AI)	Primary Key
-category_name	VARCHAR(255)	Not Null, Unique
-description	TEXT	Optional
-📁 product Table
-Column	Type	Notes
-product_id	INT (PK, AI)	Primary Key
-product_name	VARCHAR(255)	Not Null
-category_id	INT (FK)	Must reference category_id
-price	DECIMAL(10,2)	Must be > 0
-stock	INT	Must be >= 0
-📥 Excel Upload Format
-File extension: .xlsx
-Sheet name: Products
-Columns:
-product_name	category_name	price	stock
-Laptop	Electronics	999.99	20
-TV	Electronics	599.99	10
-🛠️ Tech Stack
-Layer	Technology
-Frontend	HTML, CSS, JavaScript
-Backend	Node.js + Express
-Database	MySQL
-Excel Parser	xlsx (NPM package)
-File Upload	multer (NPM package)
-🚀 Getting Started
-1. Clone the repo
-git clone https://github.com/Suryaprasanna-Seeram/ecommerce-crud-app.git
+# 🛒 E-commerce CRUD App
+
+This is a simple and beginner-friendly e-commerce CRUD web application developed as a personal project. It supports adding and managing categories and products, along with Excel file upload support.
+
+> 🔰 Developed by **Prasanna Seeram**, Fresher Full Stack Developer.
+
+---
+
+## 📌 Features
+
+- 🗂️ Add / Edit / Delete Categories
+- 📦 Manage Products with details
+- 📁 Upload products via Excel file
+- 📊 View Products grouped by Category
+- ✅ Form validations on frontend
+- 🧾 User-friendly interface
+
+---
+
+## 🛠 Tech Stack Used
+
+| Layer         | Technology           |
+|---------------|-----------------------|
+| Frontend      | HTML, CSS, JavaScript |
+| Backend       | Node.js + Express     |
+| Database      | MySQL                 |
+| Excel Upload  | `xlsx` npm package    |
+
+---
+
+## 🧑‍💻 How to Run the App Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/PrasannaSeeram/ecommerce-crud-app.git
 cd ecommerce-crud-app
+
 ### 2. Install dependencies  
    `npm install`
 
